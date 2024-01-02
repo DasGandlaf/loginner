@@ -1,0 +1,38 @@
+.points {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.points * {
+    height: 10px;
+    width: 10px;
+    animation: 5s point-rest cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.points .select {
+    animation: 0.1s point-select cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes point-rest {
+    from {
+        background: var(--error);
+    }
+
+    to {
+        scale: 0.5;
+        background: gray;
+    }
+}
+
+
+@keyframes point-select {
+    90% {
+        scale: 1.5;
+        background: var(--primary-variant);
+    }
+
+    to {
+        scale: 1;
+        background: white;
+    }
+}
